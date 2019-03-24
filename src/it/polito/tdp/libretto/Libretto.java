@@ -25,7 +25,7 @@ public class Libretto {
 		voti.add(v);
 	}
 	
-	/*
+	/**
 	 * Seleziona il sottoinsieme di voti che hanno il punteggio specificato
 	 * 
 	 * @param punti punteggio di ricerca
@@ -40,6 +40,21 @@ public class Libretto {
 				result.add(v);
 		}
 		return result;
+	}
+	
+	/**
+	 * Ricerca un {@link Voto} relativo al corso di cui è specificato il nome
+	 * 
+	 * @param nomeEsame nome del corso da ricercare
+	 * @return il {@link Voto} corrispondente, oppure {@code null} se non esistente
+	 */
+	public Voto cercaEsame(String nomeEsame) {
+		for(Voto v:this.voti) {
+			if(v.getCorso().equals(nomeEsame)) {
+				return v;
+			}
+		}
+		return null;
 	}
 
 }
