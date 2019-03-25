@@ -57,6 +57,7 @@ public class Libretto {
 		return null;
 	}
 	
+	
 	/**
 	 * DAto un {@link Voto}, determina se esiste già un voto con uguale
 	 * corso ed uguale punteggio.
